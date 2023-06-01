@@ -31,6 +31,7 @@ class CustomTabbarController: UITabBarController {
     
     private func configureHierarchy() {
         configureTopView()
+        self.tabBar.isTranslucent = false
         self.viewControllers = vc
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
             self.addTabbarIndicatorView(index: 0, isFirstTime: true)
