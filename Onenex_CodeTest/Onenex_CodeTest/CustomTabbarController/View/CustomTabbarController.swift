@@ -15,7 +15,9 @@ class CustomTabbarController: UITabBarController {
     
     private let vc = [
         HomeModule.createModule() ?? UIViewController(),
-        DiscoverModule.createModule() ?? UIViewController()
+        DiscoverModule.createModule() ?? UIViewController(),
+        CollectModule.createModule() ?? UIViewController(),
+        MyPocketModule.createModule() ?? UIViewController()
     ]
 
     override func viewDidLoad() {
@@ -56,7 +58,7 @@ class CustomTabbarController: UITabBarController {
               upperLineView.removeFromSuperview()
           }
           upperLineView = UIView(frame: CGRect(x: tabView.frame.minX + spacing, y: tabView.frame.minY + 0.1, width: tabView.frame.size.width - spacing * 2, height: 4))
-          upperLineView.backgroundColor = UIColor.black
+          upperLineView.backgroundColor = UIColor.systemBlue
           tabBar.addSubview(upperLineView)
       }
     

@@ -18,6 +18,7 @@ class Home: UIViewController {
     @IBOutlet weak var promotionsSeeAllBtn: UIButton!
     @IBOutlet weak var announcementTableView: UITableView!
     @IBOutlet weak var newsletterCollectionView: UICollectionView!
+    @IBOutlet weak var notificationBtn: UIButton!
     
     @IBOutlet weak var categoryCollectionViewHeight: NSLayoutConstraint!
     
@@ -40,6 +41,7 @@ class Home: UIViewController {
         configurePromotionsCollectionView()
         configureAnnouncementTableView()
         configureNewsLetterCollectionView()
+        configureNotificationButton()
     }
     
     private func configureBackground() {
@@ -91,6 +93,13 @@ class Home: UIViewController {
     
     private func configureBannerPageControl() {
         bannerPageControl.numberOfPages = 5
+        bannerPageControl.tintColor = UIColor(named: "Main")
+        bannerPageControl.setCurrentPageIndicatorImage(UIImage(named: "selected"), forPage: 0)
+        bannerPageControl.setCurrentPageIndicatorImage(UIImage(named: "selected"), forPage: 1)
+        bannerPageControl.setCurrentPageIndicatorImage(UIImage(named: "selected"), forPage: 2)
+        bannerPageControl.setCurrentPageIndicatorImage(UIImage(named: "selected"), forPage: 3)
+        bannerPageControl.setCurrentPageIndicatorImage(UIImage(named: "selected"), forPage: 4)
+//        bannerPageControl.setIndicatorImage(UIImage(systemName: "selected"), forPage: 0)
     }
     
     private func configurePromotionsCollectionView() {
@@ -123,10 +132,15 @@ class Home: UIViewController {
         newsletterCollectionView.showsHorizontalScrollIndicator = false
     }
     
+    private func configureNotificationButton() {
+        notificationBtn.layer.cornerRadius = notificationBtn.frame.width / 2
+    }
+    
     @objc func didTapCollapseBtn() {
         isCollapsed = !isCollapsed
         UIView.animate(withDuration: 0.3, delay: 0.0) { [weak self] in
             guard let self = self else {return }
+            self.collapseCategoryCollectinViewBtn.setImage(self.isCollapsed ? UIImage(systemName: "arrowtriangle.down.fill") : UIImage(systemName: "arrowtriangle.up.fill"), for: .normal)
             self.categoryCollectionViewHeight.constant = self.isCollapsed ? 160 : 80
             self.view.layoutIfNeeded()
         }

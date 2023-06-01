@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84907FE32A29150900D42ED6 /* Collect.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84907FE22A29150900D42ED6 /* Collect.storyboard */; };
+		84907FE52A29151600D42ED6 /* Collect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84907FE42A29151600D42ED6 /* Collect.swift */; };
+		84907FE72A29151F00D42ED6 /* CollectModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84907FE62A29151F00D42ED6 /* CollectModule.swift */; };
+		84907FEB2A29161A00D42ED6 /* MyPocket.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84907FEA2A29161A00D42ED6 /* MyPocket.storyboard */; };
+		84907FED2A29162800D42ED6 /* MyPocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84907FEC2A29162800D42ED6 /* MyPocket.swift */; };
+		84907FEF2A29163D00D42ED6 /* MyPocketModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84907FEE2A29163D00D42ED6 /* MyPocketModule.swift */; };
 		84D433C62A2750FC0060098F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D433C52A2750FC0060098F /* AppDelegate.swift */; };
 		84D433C82A2750FC0060098F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D433C72A2750FC0060098F /* SceneDelegate.swift */; };
 		84D433CA2A2750FC0060098F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D433C92A2750FC0060098F /* ViewController.swift */; };
@@ -35,6 +41,7 @@
 		84D434232A28ED250060098F /* AnnouncementTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84D434212A28ED240060098F /* AnnouncementTableViewCell.xib */; };
 		84D434272A28F3F00060098F /* NewsletterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D434252A28F3F00060098F /* NewsletterCollectionViewCell.swift */; };
 		84D434282A28F3F00060098F /* NewsletterCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84D434262A28F3F00060098F /* NewsletterCollectionViewCell.xib */; };
+		84D4342C2A29083E0060098F /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84D4342B2A29083E0060098F /* Colors.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +62,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		84907FE22A29150900D42ED6 /* Collect.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Collect.storyboard; sourceTree = "<group>"; };
+		84907FE42A29151600D42ED6 /* Collect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collect.swift; sourceTree = "<group>"; };
+		84907FE62A29151F00D42ED6 /* CollectModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectModule.swift; sourceTree = "<group>"; };
+		84907FEA2A29161A00D42ED6 /* MyPocket.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyPocket.storyboard; sourceTree = "<group>"; };
+		84907FEC2A29162800D42ED6 /* MyPocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPocket.swift; sourceTree = "<group>"; };
+		84907FEE2A29163D00D42ED6 /* MyPocketModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPocketModule.swift; sourceTree = "<group>"; };
 		84D433C22A2750FC0060098F /* Onenex_CodeTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Onenex_CodeTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84D433C52A2750FC0060098F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84D433C72A2750FC0060098F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +100,7 @@
 		84D434212A28ED240060098F /* AnnouncementTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnnouncementTableViewCell.xib; sourceTree = "<group>"; };
 		84D434252A28F3F00060098F /* NewsletterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsletterCollectionViewCell.swift; sourceTree = "<group>"; };
 		84D434262A28F3F00060098F /* NewsletterCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsletterCollectionViewCell.xib; sourceTree = "<group>"; };
+		84D4342B2A29083E0060098F /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +128,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		84907FE02A2914F900D42ED6 /* Collect */ = {
+			isa = PBXGroup;
+			children = (
+				84907FE12A2914FE00D42ED6 /* View */,
+				84907FE62A29151F00D42ED6 /* CollectModule.swift */,
+			);
+			path = Collect;
+			sourceTree = "<group>";
+		};
+		84907FE12A2914FE00D42ED6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				84907FE22A29150900D42ED6 /* Collect.storyboard */,
+				84907FE42A29151600D42ED6 /* Collect.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		84907FE82A29160C00D42ED6 /* MyPocket */ = {
+			isa = PBXGroup;
+			children = (
+				84907FE92A29161100D42ED6 /* View */,
+				84907FEE2A29163D00D42ED6 /* MyPocketModule.swift */,
+			);
+			path = MyPocket;
+			sourceTree = "<group>";
+		};
+		84907FE92A29161100D42ED6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				84907FEA2A29161A00D42ED6 /* MyPocket.storyboard */,
+				84907FEC2A29162800D42ED6 /* MyPocket.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		84D433B92A2750FC0060098F = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +187,8 @@
 		84D433C42A2750FC0060098F /* Onenex_CodeTest */ = {
 			isa = PBXGroup;
 			children = (
+				84907FE82A29160C00D42ED6 /* MyPocket */,
+				84907FE02A2914F900D42ED6 /* Collect */,
 				84D434062A27BB900060098F /* CustomTabbarController */,
 				84D433FD2A27B7C60060098F /* Discover */,
 				84D433F52A2754F40060098F /* Home */,
@@ -147,6 +199,7 @@
 				84D433CE2A2750FF0060098F /* Assets.xcassets */,
 				84D433D02A2750FF0060098F /* LaunchScreen.storyboard */,
 				84D433D32A2750FF0060098F /* Info.plist */,
+				84D4342B2A29083E0060098F /* Colors.xcassets */,
 			);
 			path = Onenex_CodeTest;
 			sourceTree = "<group>";
@@ -378,13 +431,16 @@
 			files = (
 				84D433D22A2750FF0060098F /* LaunchScreen.storyboard in Resources */,
 				84D434142A283E310060098F /* CategoryCollectionViewCell.xib in Resources */,
+				84907FEB2A29161A00D42ED6 /* MyPocket.storyboard in Resources */,
 				84D434192A2891AC0060098F /* BannerCollectionViewCell.xib in Resources */,
 				84D433CF2A2750FF0060098F /* Assets.xcassets in Resources */,
+				84907FE32A29150900D42ED6 /* Collect.storyboard in Resources */,
 				84D434002A27B7D70060098F /* Discover.storyboard in Resources */,
 				84D433CD2A2750FC0060098F /* Main.storyboard in Resources */,
 				84D433F82A2755020060098F /* Home.storyboard in Resources */,
 				84D4341E2A289E020060098F /* PromotionCollectionViewCell.xib in Resources */,
 				84D434232A28ED250060098F /* AnnouncementTableViewCell.xib in Resources */,
+				84D4342C2A29083E0060098F /* Colors.xcassets in Resources */,
 				84D4340B2A27BD020060098F /* CustomTabbarController.storyboard in Resources */,
 				84D434282A28F3F00060098F /* NewsletterCollectionViewCell.xib in Resources */,
 			);
@@ -412,14 +468,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				84D4340F2A27C0200060098F /* CustomTabbarModule.swift in Sources */,
+				84907FE52A29151600D42ED6 /* Collect.swift in Sources */,
+				84907FED2A29162800D42ED6 /* MyPocket.swift in Sources */,
 				84D434182A2891AC0060098F /* BannerCollectionViewCell.swift in Sources */,
 				84D433CA2A2750FC0060098F /* ViewController.swift in Sources */,
 				84D433C62A2750FC0060098F /* AppDelegate.swift in Sources */,
 				84D434022A27B7E30060098F /* Discover.swift in Sources */,
 				84D434272A28F3F00060098F /* NewsletterCollectionViewCell.swift in Sources */,
 				84D433FC2A27552B0060098F /* HomeModule.swift in Sources */,
+				84907FEF2A29163D00D42ED6 /* MyPocketModule.swift in Sources */,
 				84D434092A27BBAF0060098F /* CustomTabbarController.swift in Sources */,
 				84D434132A283E310060098F /* CategoryCollectionViewCell.swift in Sources */,
+				84907FE72A29151F00D42ED6 /* CollectModule.swift in Sources */,
 				84D433FA2A27550E0060098F /* Home.swift in Sources */,
 				84D433C82A2750FC0060098F /* SceneDelegate.swift in Sources */,
 				84D4341D2A289E020060098F /* PromotionCollectionViewCell.swift in Sources */,
