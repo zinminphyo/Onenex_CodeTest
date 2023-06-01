@@ -19,6 +19,12 @@
 		84D433F82A2755020060098F /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84D433F72A2755020060098F /* Home.storyboard */; };
 		84D433FA2A27550E0060098F /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D433F92A27550E0060098F /* Home.swift */; };
 		84D433FC2A27552B0060098F /* HomeModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D433FB2A27552B0060098F /* HomeModule.swift */; };
+		84D434002A27B7D70060098F /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84D433FF2A27B7D70060098F /* Discover.storyboard */; };
+		84D434022A27B7E30060098F /* Discover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D434012A27B7E30060098F /* Discover.swift */; };
+		84D434042A27B7F00060098F /* DiscoverModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D434032A27B7F00060098F /* DiscoverModule.swift */; };
+		84D434092A27BBAF0060098F /* CustomTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D434082A27BBAF0060098F /* CustomTabbarController.swift */; };
+		84D4340B2A27BD020060098F /* CustomTabbarController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84D4340A2A27BD020060098F /* CustomTabbarController.storyboard */; };
+		84D4340F2A27C0200060098F /* CustomTabbarModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D4340E2A27C0200060098F /* CustomTabbarModule.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +61,12 @@
 		84D433F72A2755020060098F /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		84D433F92A27550E0060098F /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		84D433FB2A27552B0060098F /* HomeModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModule.swift; sourceTree = "<group>"; };
+		84D433FF2A27B7D70060098F /* Discover.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Discover.storyboard; sourceTree = "<group>"; };
+		84D434012A27B7E30060098F /* Discover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Discover.swift; sourceTree = "<group>"; };
+		84D434032A27B7F00060098F /* DiscoverModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverModule.swift; sourceTree = "<group>"; };
+		84D434082A27BBAF0060098F /* CustomTabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabbarController.swift; sourceTree = "<group>"; };
+		84D4340A2A27BD020060098F /* CustomTabbarController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CustomTabbarController.storyboard; sourceTree = "<group>"; };
+		84D4340E2A27C0200060098F /* CustomTabbarModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabbarModule.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +117,8 @@
 		84D433C42A2750FC0060098F /* Onenex_CodeTest */ = {
 			isa = PBXGroup;
 			children = (
+				84D434062A27BB900060098F /* CustomTabbarController */,
+				84D433FD2A27B7C60060098F /* Discover */,
 				84D433F52A2754F40060098F /* Home */,
 				84D433C52A2750FC0060098F /* AppDelegate.swift */,
 				84D433C72A2750FC0060098F /* SceneDelegate.swift */,
@@ -148,6 +162,42 @@
 			children = (
 				84D433F72A2755020060098F /* Home.storyboard */,
 				84D433F92A27550E0060098F /* Home.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		84D433FD2A27B7C60060098F /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+				84D433FE2A27B7CD0060098F /* View */,
+				84D434032A27B7F00060098F /* DiscoverModule.swift */,
+			);
+			path = Discover;
+			sourceTree = "<group>";
+		};
+		84D433FE2A27B7CD0060098F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				84D433FF2A27B7D70060098F /* Discover.storyboard */,
+				84D434012A27B7E30060098F /* Discover.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		84D434062A27BB900060098F /* CustomTabbarController */ = {
+			isa = PBXGroup;
+			children = (
+				84D434072A27BB990060098F /* View */,
+				84D4340E2A27C0200060098F /* CustomTabbarModule.swift */,
+			);
+			path = CustomTabbarController;
+			sourceTree = "<group>";
+		};
+		84D434072A27BB990060098F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				84D434082A27BBAF0060098F /* CustomTabbarController.swift */,
+				84D4340A2A27BD020060098F /* CustomTabbarController.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -258,8 +308,10 @@
 			files = (
 				84D433D22A2750FF0060098F /* LaunchScreen.storyboard in Resources */,
 				84D433CF2A2750FF0060098F /* Assets.xcassets in Resources */,
+				84D434002A27B7D70060098F /* Discover.storyboard in Resources */,
 				84D433CD2A2750FC0060098F /* Main.storyboard in Resources */,
 				84D433F82A2755020060098F /* Home.storyboard in Resources */,
+				84D4340B2A27BD020060098F /* CustomTabbarController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,11 +336,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84D4340F2A27C0200060098F /* CustomTabbarModule.swift in Sources */,
 				84D433CA2A2750FC0060098F /* ViewController.swift in Sources */,
 				84D433C62A2750FC0060098F /* AppDelegate.swift in Sources */,
+				84D434022A27B7E30060098F /* Discover.swift in Sources */,
 				84D433FC2A27552B0060098F /* HomeModule.swift in Sources */,
+				84D434092A27BBAF0060098F /* CustomTabbarController.swift in Sources */,
 				84D433FA2A27550E0060098F /* Home.swift in Sources */,
 				84D433C82A2750FC0060098F /* SceneDelegate.swift in Sources */,
+				84D434042A27B7F00060098F /* DiscoverModule.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
