@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="PromotionCollectionViewCell" customModule="Onenex_CodeTest" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="196" height="150"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="196" height="150"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Home" translatesAutoresizingMaskIntoConstraints="NO" id="uVd-d6-LOY">
+                        <rect key="frame" x="0.0" y="8" width="196" height="100"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="100" id="ifF-4d-qWx"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="UmO-c3-udu">
+                        <rect key="frame" x="0.0" y="110" width="196" height="38"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1st May" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Dr-UD-C6v">
+                                <rect key="frame" x="0.0" y="0.0" width="196" height="19"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" systemColor="systemIndigoColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Winter Sales" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZX1-OL-aWe">
+                                <rect key="frame" x="0.0" y="19" width="196" height="19"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="UmO-c3-udu" firstAttribute="trailing" secondItem="uVd-d6-LOY" secondAttribute="trailing" id="MnO-JE-68l"/>
+                <constraint firstAttribute="trailing" secondItem="uVd-d6-LOY" secondAttribute="trailing" id="QGR-bh-Kn0"/>
+                <constraint firstItem="uVd-d6-LOY" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="Qr1-XQ-V5a"/>
+                <constraint firstItem="UmO-c3-udu" firstAttribute="leading" secondItem="uVd-d6-LOY" secondAttribute="leading" id="caf-WO-WGc"/>
+                <constraint firstAttribute="bottom" secondItem="UmO-c3-udu" secondAttribute="bottom" constant="2" id="hkg-Qa-mR2"/>
+                <constraint firstItem="uVd-d6-LOY" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="nxX-yh-WTV"/>
+                <constraint firstItem="UmO-c3-udu" firstAttribute="top" secondItem="uVd-d6-LOY" secondAttribute="bottom" constant="2" id="uq2-cs-ivN"/>
+            </constraints>
+            <size key="customSize" width="196" height="150"/>
+            <connections>
+                <outlet property="promotionDateLabel" destination="7Dr-UD-C6v" id="ISp-7u-wlm"/>
+                <outlet property="promotionImageView" destination="uVd-d6-LOY" id="G8N-Vn-gVf"/>
+                <outlet property="promotionNameLabel" destination="ZX1-OL-aWe" id="0mj-hf-r28"/>
+            </connections>
+            <point key="canvasLocation" x="54.961832061068698" y="54.225352112676056"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Home" width="383" height="178"/>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

@@ -14,7 +14,10 @@ class Home: UIViewController {
     @IBOutlet weak var summaryContainerView: UIView!
     @IBOutlet weak var bannerCollectionView: UICollectionView!
     @IBOutlet weak var bannerPageControl: UIPageControl!
-    
+    @IBOutlet weak var promotionsCollectionView: UICollectionView!
+    @IBOutlet weak var promotionsSeeAllBtn: UIButton!
+    @IBOutlet weak var announcementTableView: UITableView!
+    @IBOutlet weak var newsletterCollectionView: UICollectionView!
     
     @IBOutlet weak var categoryCollectionViewHeight: NSLayoutConstraint!
     
@@ -34,10 +37,13 @@ class Home: UIViewController {
         configureSummaryContainerView()
         configureBannerCollectionView()
         configureBannerPageControl()
+        configurePromotionsCollectionView()
+        configureAnnouncementTableView()
+        configureNewsLetterCollectionView()
     }
     
     private func configureBackground() {
-        self.view.backgroundColor = UIColor.blue
+        self.view.backgroundColor = UIColor.white
     }
     
     private func configureSummaryContainerView() {
@@ -68,7 +74,6 @@ class Home: UIViewController {
     private func configureBannerCollectionView() {
         bannerCollectionView.register(UINib(nibName: String(describing: BannerCollectionViewCell.self), bundle: nil), forCellWithReuseIdentifier: BannerCollectionViewCell.reuseIdentifier)
         bannerCollectionView.dataSource = self
-        bannerCollectionView.delegate = self
         
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1.0))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
@@ -88,6 +93,36 @@ class Home: UIViewController {
         bannerPageControl.numberOfPages = 5
     }
     
+    private func configurePromotionsCollectionView() {
+        promotionsCollectionView.register(UINib(nibName: String(describing: PromotionCollectionViewCell.self), bundle: nil), forCellWithReuseIdentifier: PromotionCollectionViewCell.reuseIdentifier)
+        promotionsCollectionView.dataSource = self
+        promotionsCollectionView.contentInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 0)
+        let flowLayout = UICollectionViewFlowLayout()
+        flowLayout.itemSize = CGSize(width: promotionsCollectionView.frame.width / 1.5, height: promotionsCollectionView.frame.height)
+        flowLayout.scrollDirection = .horizontal
+        promotionsCollectionView.showsVerticalScrollIndicator = false
+        promotionsCollectionView.showsHorizontalScrollIndicator = false
+        promotionsCollectionView.collectionViewLayout = flowLayout
+    }
+    
+    private func configureAnnouncementTableView() {
+        announcementTableView.register(UINib(nibName: String(describing: AnnouncementTableViewCell.self), bundle: nil), forCellReuseIdentifier: AnnouncementTableViewCell.reuseIdentifier)
+        announcementTableView.dataSource = self
+        announcementTableView.delegate = self
+    }
+    
+    private func configureNewsLetterCollectionView() {
+        newsletterCollectionView.register(UINib(nibName: String(describing: NewsletterCollectionViewCell.self), bundle: nil), forCellWithReuseIdentifier: NewsletterCollectionViewCell.reuseIdentifier)
+        newsletterCollectionView.contentInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
+        newsletterCollectionView.dataSource = self
+        let flowLayout = UICollectionViewFlowLayout()
+        flowLayout.itemSize = CGSize(width: newsletterCollectionView.frame.width / 3 - 20, height: newsletterCollectionView.frame.height)
+        flowLayout.scrollDirection = .horizontal
+        newsletterCollectionView.collectionViewLayout = flowLayout
+        newsletterCollectionView.showsVerticalScrollIndicator = false
+        newsletterCollectionView.showsHorizontalScrollIndicator = false
+    }
+    
     @objc func didTapCollapseBtn() {
         isCollapsed = !isCollapsed
         UIView.animate(withDuration: 0.3, delay: 0.0) { [weak self] in
@@ -99,11 +134,15 @@ class Home: UIViewController {
 
 }
 
-extension Home: UICollectionViewDataSource, UICollectionViewDelegate {
+extension Home: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == firstCollectionView {
             return 8
         } else if collectionView == bannerCollectionView {
+            return 5
+        } else if collectionView == promotionsCollectionView {
+            return 5
+        } else if collectionView == newsletterCollectionView {
             return 5
         } else {
             return 0
@@ -118,13 +157,31 @@ extension Home: UICollectionViewDataSource, UICollectionViewDelegate {
         } else if collectionView == bannerCollectionView {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BannerCollectionViewCell.reuseIdentifier, for: indexPath) as? BannerCollectionViewCell else { return UICollectionViewCell() }
             return cell
+        } else if collectionView == promotionsCollectionView {
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PromotionCollectionViewCell.reuseIdentifier, for: indexPath) as? PromotionCollectionViewCell else { return UICollectionViewCell() }
+            return cell
+        } else if collectionView == newsletterCollectionView {
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NewsletterCollectionViewCell.reuseIdentifier, for: indexPath) as? NewsletterCollectionViewCell else { return UICollectionViewCell() }
+            return cell
         } else {
             return UICollectionViewCell()
         }
     }
     
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        let index = scrollView.contentOffset.x / scrollView.frame.width
-        print("Index is \(index)")
+}
+
+
+extension Home: UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 2
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: AnnouncementTableViewCell.reuseIdentifier, for: indexPath) as? AnnouncementTableViewCell else { return UITableViewCell() }
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 50
     }
 }
