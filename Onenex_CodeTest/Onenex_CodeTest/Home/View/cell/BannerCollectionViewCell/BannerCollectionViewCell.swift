@@ -21,13 +21,18 @@ class BannerCollectionViewCell: UICollectionViewCell {
         
         configureHierarchy()
     }
-
+    
     
     private func configureHierarchy() {
         configureImageView()
+        configureTraingleView()
     }
     
     private func configureImageView() {
         bannerImageView.contentMode = .scaleAspectFill
+    }
+    
+    private func configureTraingleView() {
+        
     }
 }
