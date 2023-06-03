@@ -40,5 +40,10 @@ class NewsletterCollectionViewCell: UICollectionViewCell {
     private func configureTitleLabel() {
         
     }
+    
+    func render(article: ArticleModel) {
+        newsletterDateLabel.text = article.createdAt
+        newsletterTitleLabel.text = article.title
+    }
 
 }

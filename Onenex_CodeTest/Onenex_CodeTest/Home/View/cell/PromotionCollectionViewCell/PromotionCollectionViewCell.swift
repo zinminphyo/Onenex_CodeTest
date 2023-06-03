@@ -43,4 +43,9 @@ class PromotionCollectionViewCell: UICollectionViewCell {
     private func configureNameLabel() {
         
     }
+    
+    func render(article: ArticleModel) {
+        self.promotionDateLabel.text = article.createdAt
+        self.promotionNameLabel.text = article.title
+    }
 }

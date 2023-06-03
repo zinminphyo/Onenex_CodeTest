@@ -22,12 +22,21 @@ class Home: UIViewController {
     
     @IBOutlet weak var categoryCollectionViewHeight: NSLayoutConstraint!
     
+    @IBOutlet weak var announcementTableViewHeight: NSLayoutConstraint!
+    
     private var isCollapsed: Bool = true
+    
+    var presenter: HomePresenting?
+    
+    private var promotionLists: [ArticleModel] = []
+    private var announcementLists: [ArticleModel] = []
+    private var newsletterLists: [ArticleModel] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         configureHierarchy()
+        
     }
     
 
@@ -42,6 +51,7 @@ class Home: UIViewController {
         configureAnnouncementTableView()
         configureNewsLetterCollectionView()
         configureNotificationButton()
+        configurePresenter()
     }
     
     private func configureBackground() {
@@ -99,7 +109,6 @@ class Home: UIViewController {
         bannerPageControl.setCurrentPageIndicatorImage(UIImage(named: "selected"), forPage: 2)
         bannerPageControl.setCurrentPageIndicatorImage(UIImage(named: "selected"), forPage: 3)
         bannerPageControl.setCurrentPageIndicatorImage(UIImage(named: "selected"), forPage: 4)
-//        bannerPageControl.setIndicatorImage(UIImage(systemName: "selected"), forPage: 0)
     }
     
     private func configurePromotionsCollectionView() {
@@ -136,6 +145,10 @@ class Home: UIViewController {
         notificationBtn.layer.cornerRadius = notificationBtn.frame.width / 2
     }
     
+    private func configurePresenter() {
+        presenter?.fetchArticleLists()
+    }
+    
     @objc func didTapCollapseBtn() {
         isCollapsed = !isCollapsed
         UIView.animate(withDuration: 0.3, delay: 0.0) { [weak self] in
@@ -155,9 +168,9 @@ extension Home: UICollectionViewDataSource {
         } else if collectionView == bannerCollectionView {
             return 5
         } else if collectionView == promotionsCollectionView {
-            return 5
+            return promotionLists.count
         } else if collectionView == newsletterCollectionView {
-            return 5
+            return newsletterLists.count
         } else {
             return 0
         }
@@ -173,9 +186,11 @@ extension Home: UICollectionViewDataSource {
             return cell
         } else if collectionView == promotionsCollectionView {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PromotionCollectionViewCell.reuseIdentifier, for: indexPath) as? PromotionCollectionViewCell else { return UICollectionViewCell() }
+            cell.render(article: promotionLists[indexPath.row])
             return cell
         } else if collectionView == newsletterCollectionView {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NewsletterCollectionViewCell.reuseIdentifier, for: indexPath) as? NewsletterCollectionViewCell else { return UICollectionViewCell() }
+            cell.render(article: newsletterLists[indexPath.row])
             return cell
         } else {
             return UICollectionViewCell()
@@ -187,15 +202,45 @@ extension Home: UICollectionViewDataSource {
 
 extension Home: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return announcementLists.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: AnnouncementTableViewCell.reuseIdentifier, for: indexPath) as? AnnouncementTableViewCell else { return UITableViewCell() }
+        cell.render(article: announcementLists[indexPath.row])
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 50
+    }
+}
+
+
+
+extension Home: HomeViewDelegate {
+    func render(state: State) {
+        switch state {
+        case .renderPromotionLists(let lists):
+            self.promotionLists = lists
+            self.promotionsCollectionView.reloadData()
+        case .renderAnnouncementLists(let lists):
+            self.announcementLists = lists
+            UIView.animate(withDuration: 0.1, delay: 0.0) { [weak self] in
+                guard let self = self else { return }
+                self.announcementTableViewHeight.constant = CGFloat(50 * lists.count)
+                self.view.layoutIfNeeded()
+                self.announcementTableView.reloadData()
+            }
+        case .renderNewsLetterLists(let lists):
+            self.newsletterLists = lists
+            self.newsletterCollectionView.reloadData()
+        case .renderError(let error):
+            print("Error is \(error)")
+        case .showLoading:
+            print("Show loading")
+        case .hideLoading:
+            print("Hide Loading")
+        }
     }
 }

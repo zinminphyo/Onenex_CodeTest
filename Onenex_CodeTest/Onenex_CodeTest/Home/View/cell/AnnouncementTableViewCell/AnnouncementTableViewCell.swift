@@ -43,4 +43,10 @@ class AnnouncementTableViewCell: UITableViewCell {
     private func configureTitleLabel() {
         
     }
+    
+    func render(article: ArticleModel) {
+        self.announcementTitleLabel.text = article.title
+        self.announcementDateLabel.text = article.createdAt
+    }
 }
+

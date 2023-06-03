@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ctp-05-7v6">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1236"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1230"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DFm-oe-47Y">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
@@ -197,7 +197,7 @@
                                                 </constraints>
                                             </view>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="sDI-el-HKU">
-                                                <rect key="frame" x="16" y="189" width="382" height="160"/>
+                                                <rect key="frame" x="16" y="193" width="382" height="160"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="160" id="fBh-PO-Zhr"/>
@@ -220,14 +220,14 @@
                                                 </cells>
                                             </collectionView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PeM-Xa-GI7">
-                                                <rect key="frame" x="0.0" y="349" width="414" height="59"/>
+                                                <rect key="frame" x="0.0" y="353" width="414" height="49"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X9V-Tc-5zl">
-                                                        <rect key="frame" x="177" y="24" width="60" height="35"/>
-                                                        <color key="backgroundColor" systemColor="systemMintColor"/>
+                                                        <rect key="frame" x="172" y="24" width="70" height="25"/>
+                                                        <color key="backgroundColor" name="Secondary"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="60" id="Imj-BW-S3W"/>
-                                                            <constraint firstAttribute="height" constant="35" id="ggR-EW-7BG"/>
+                                                            <constraint firstAttribute="width" constant="70" id="Imj-BW-S3W"/>
+                                                            <constraint firstAttribute="height" constant="25" id="ggR-EW-7BG"/>
                                                         </constraints>
                                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -242,7 +242,7 @@
                                                 </constraints>
                                             </view>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="MqP-YY-Ize">
-                                                <rect key="frame" x="0.0" y="408" width="414" height="150"/>
+                                                <rect key="frame" x="0.0" y="402" width="414" height="150"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="150" id="Zbv-gR-Rfc"/>
@@ -265,14 +265,14 @@
                                                 </cells>
                                             </collectionView>
                                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Fbc-LP-vyQ">
-                                                <rect key="frame" x="57" y="532" width="300" height="26"/>
+                                                <rect key="frame" x="57" y="526" width="300" height="26"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="300" id="uuf-Z1-76r"/>
                                                 </constraints>
                                                 <color key="currentPageIndicatorTintColor" name="Main"/>
                                             </pageControl>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IiR-q0-hnE">
-                                                <rect key="frame" x="0.0" y="574" width="414" height="210"/>
+                                                <rect key="frame" x="0.0" y="568" width="414" height="210"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b2V-QF-BrU">
                                                         <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
@@ -340,7 +340,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gmq-PW-dIV">
-                                                <rect key="frame" x="0.0" y="800" width="414" height="150"/>
+                                                <rect key="frame" x="0.0" y="794" width="414" height="150"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aMR-DX-b9c">
                                                         <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
@@ -391,7 +391,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fKS-1s-fNM">
-                                                <rect key="frame" x="0.0" y="966" width="414" height="250"/>
+                                                <rect key="frame" x="0.0" y="960" width="414" height="250"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EtL-p1-wyJ">
                                                         <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
@@ -466,7 +466,7 @@
                                             <constraint firstItem="DFm-oe-47Y" firstAttribute="leading" secondItem="ctp-05-7v6" secondAttribute="leading" id="82E-oC-4eb"/>
                                             <constraint firstAttribute="trailing" secondItem="sDI-el-HKU" secondAttribute="trailing" constant="16" id="B82-54-dnW"/>
                                             <constraint firstItem="Fbc-LP-vyQ" firstAttribute="bottom" secondItem="MqP-YY-Ize" secondAttribute="bottom" id="DAC-Tm-0Hl"/>
-                                            <constraint firstItem="sDI-el-HKU" firstAttribute="top" secondItem="Vz4-os-zKg" secondAttribute="bottom" constant="4" id="Hjf-34-O4a"/>
+                                            <constraint firstItem="sDI-el-HKU" firstAttribute="top" secondItem="Vz4-os-zKg" secondAttribute="bottom" constant="8" id="Hjf-34-O4a"/>
                                             <constraint firstAttribute="trailing" secondItem="DFm-oe-47Y" secondAttribute="trailing" id="LTL-yc-SUC"/>
                                             <constraint firstAttribute="trailing" secondItem="fKS-1s-fNM" secondAttribute="trailing" id="Nti-Q9-jE2"/>
                                             <constraint firstItem="DFm-oe-47Y" firstAttribute="top" secondItem="ctp-05-7v6" secondAttribute="top" id="OBZ-mb-npI"/>
@@ -513,6 +513,7 @@
                     </view>
                     <connections>
                         <outlet property="announcementTableView" destination="kQx-OJ-CNz" id="AEE-Cr-n5b"/>
+                        <outlet property="announcementTableViewHeight" destination="csN-L8-5da" id="Ne8-wX-6k5"/>
                         <outlet property="bannerCollectionView" destination="MqP-YY-Ize" id="o7R-5M-421"/>
                         <outlet property="bannerPageControl" destination="Fbc-LP-vyQ" id="8K6-57-fPZ"/>
                         <outlet property="categoryCollectionViewHeight" destination="fBh-PO-Zhr" id="0t0-Rw-KJB"/>
@@ -537,6 +538,9 @@
         <image name="person.circle.fill" catalog="system" width="128" height="123"/>
         <namedColor name="Main">
             <color red="0.0" green="0.31764705882352939" blue="0.49411764705882355" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Secondary">
+            <color red="0.51372549019607838" green="0.7686274509803922" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

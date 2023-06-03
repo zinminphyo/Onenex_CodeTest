@@ -17,6 +17,15 @@ enum HomeModule {
         item.image = UIImage(systemName: "house")
         item.title = "Home"
         vc.tabBarItem = item
+        
+        let presenter = HomePresenter()
+        presenter.viewDelegate = vc
+        
+        vc.presenter = presenter
+        
+        let interactor = HomeInteractor()
+        presenter.interactor = interactor
+        
         return vc
     }
 }
