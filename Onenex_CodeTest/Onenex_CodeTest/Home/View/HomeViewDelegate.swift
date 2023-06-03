@@ -8,7 +8,7 @@
 import Foundation
 
 
-protocol HomeViewDelegate {
+protocol HomeViewDelegate: LoadingPresentable {
     var presenter: HomePresenting? { get set }
     func render(state: Home.State)
 }

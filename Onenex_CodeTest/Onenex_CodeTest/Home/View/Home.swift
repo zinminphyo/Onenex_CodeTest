@@ -238,9 +238,9 @@ extension Home: HomeViewDelegate {
         case .renderError(let error):
             print("Error is \(error)")
         case .showLoading:
-            print("Show loading")
+            showLoading()
         case .hideLoading:
-            print("Hide Loading")
+            hideLoading()
         }
     }
 }

@@ -15,12 +15,18 @@ class HomePresenter: HomePresenting {
     var interactor: HomeInteracting?
     
     func fetchArticleLists() {
+        
+        self.viewDelegate?.render(state: .showLoading)
+        
         Task {
             
             let result = try await interactor?.fetchArticleLists()
             
             
             DispatchQueue.main.async { [weak self] in
+                
+                self?.viewDelegate?.render(state: .hideLoading)
+                
                 guard let self  = self else { return }
                 guard let data = result?.data else { return }
                
@@ -33,6 +39,9 @@ class HomePresenter: HomePresenting {
                 
                 let newsLetterLists = data.filter{ $0.value.articleId == 307363530275953074 }.compactMap{ $0.value }
                 self.viewDelegate?.render(state: .renderNewsLetterLists(newsLetterLists))
+                
+                
+                
                 
             }
         }
