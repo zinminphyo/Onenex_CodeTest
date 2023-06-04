@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1C68195435729EE6B23B45F8 /* Pods_Onenex_CodeTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 107E8F89D25360BD561AB081 /* Pods_Onenex_CodeTest.framework */; };
 		83C3C47D396AC245379507D5 /* Pods_Onenex_CodeTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E3D3CA5EF2913306F73827F /* Pods_Onenex_CodeTestTests.framework */; };
+		84840D122A2C5C7600F4B5F5 /* OverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84840D112A2C5C7600F4B5F5 /* OverlayView.swift */; };
 		84907FE32A29150900D42ED6 /* Collect.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84907FE22A29150900D42ED6 /* Collect.storyboard */; };
 		84907FE52A29151600D42ED6 /* Collect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84907FE42A29151600D42ED6 /* Collect.swift */; };
 		84907FE72A29151F00D42ED6 /* CollectModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84907FE62A29151F00D42ED6 /* CollectModule.swift */; };
@@ -90,6 +91,7 @@
 		412167A1A33978E2659AE871 /* Pods_Onenex_CodeTest_Onenex_CodeTestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Onenex_CodeTest_Onenex_CodeTestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		46C0F8A5264EA330B305E29C /* Pods-Onenex_CodeTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Onenex_CodeTest.release.xcconfig"; path = "Target Support Files/Pods-Onenex_CodeTest/Pods-Onenex_CodeTest.release.xcconfig"; sourceTree = "<group>"; };
 		5A1A2987B3F70EEF92E21FD9 /* Pods-Onenex_CodeTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Onenex_CodeTestTests.debug.xcconfig"; path = "Target Support Files/Pods-Onenex_CodeTestTests/Pods-Onenex_CodeTestTests.debug.xcconfig"; sourceTree = "<group>"; };
+		84840D112A2C5C7600F4B5F5 /* OverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayView.swift; sourceTree = "<group>"; };
 		84907FE22A29150900D42ED6 /* Collect.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Collect.storyboard; sourceTree = "<group>"; };
 		84907FE42A29151600D42ED6 /* Collect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collect.swift; sourceTree = "<group>"; };
 		84907FE62A29151F00D42ED6 /* CollectModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectModule.swift; sourceTree = "<group>"; };
@@ -186,6 +188,22 @@
 				30299BCF1487783F0F719B0A /* Pods-Onenex_CodeTestTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		84840D0F2A2C5C6600F4B5F5 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				84840D102A2C5C6B00F4B5F5 /* OverlayView */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
+		84840D102A2C5C6B00F4B5F5 /* OverlayView */ = {
+			isa = PBXGroup;
+			children = (
+				84840D112A2C5C7600F4B5F5 /* OverlayView.swift */,
+			);
+			path = OverlayView;
 			sourceTree = "<group>";
 		};
 		84907FE02A2914F900D42ED6 /* Collect */ = {
@@ -319,6 +337,7 @@
 		84D433C42A2750FC0060098F /* Onenex_CodeTest */ = {
 			isa = PBXGroup;
 			children = (
+				84840D0F2A2C5C6600F4B5F5 /* CustomView */,
 				849080162A2BB12600D42ED6 /* Shared */,
 				849080022A29EB8D00D42ED6 /* Services */,
 				84907FFA2A2999B100D42ED6 /* Extension */,
@@ -738,6 +757,7 @@
 				849080102A29ED4500D42ED6 /* HomePresenter.swift in Sources */,
 				84907FE52A29151600D42ED6 /* Collect.swift in Sources */,
 				84907FED2A29162800D42ED6 /* MyPocket.swift in Sources */,
+				84840D122A2C5C7600F4B5F5 /* OverlayView.swift in Sources */,
 				8490800A2A29EC9E00D42ED6 /* HomePresenting.swift in Sources */,
 				84D434182A2891AC0060098F /* BannerCollectionViewCell.swift in Sources */,
 				849080052A29EBA800D42ED6 /* FetchArticleServiceProtocol.swift in Sources */,

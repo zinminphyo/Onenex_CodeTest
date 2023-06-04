@@ -19,24 +19,28 @@
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Home" translatesAutoresizingMaskIntoConstraints="NO" id="ksD-z3-PfK">
                         <rect key="frame" x="0.0" y="0.0" width="249" height="113"/>
                     </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sRG-eb-kkw" customClass="OverlayView" customModule="Onenex_CodeTest" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="99.666666666666671" height="113"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="pZY-IV-YXr">
-                        <rect key="frame" x="16.000000000000007" y="32" width="124.66666666666669" height="49.333333333333343"/>
+                        <rect key="frame" x="16" y="29.333333333333332" width="149" height="54.666666666666671"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Star Villa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J0b-0S-aSc">
-                                <rect key="frame" x="0.0" y="0.0" width="124.66666666666667" height="14"/>
+                                <rect key="frame" x="0.0" y="0.0" width="149" height="14"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Special Promotion" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AeR-9j-Upk">
-                                <rect key="frame" x="0.0" y="14.000000000000002" width="124.66666666666667" height="17.666666666666671"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <rect key="frame" x="0.0" y="14.000000000000005" width="149" height="20.333333333333329"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25% OFF" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NJo-5j-zke">
-                                <rect key="frame" x="0.0" y="31.666666666666664" width="124.66666666666667" height="17.666666666666664"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <rect key="frame" x="0.0" y="34.333333333333329" width="149" height="20.333333333333329"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -46,9 +50,12 @@
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
-                <constraint firstItem="pZY-IV-YXr" firstAttribute="width" secondItem="ksD-z3-PfK" secondAttribute="width" multiplier="0.5" id="2sm-8g-tLh"/>
+                <constraint firstItem="sRG-eb-kkw" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Hy2-tE-gVL"/>
                 <constraint firstAttribute="bottom" secondItem="ksD-z3-PfK" secondAttribute="bottom" id="IXI-vc-cQq"/>
+                <constraint firstItem="sRG-eb-kkw" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" multiplier="0.4" id="IbE-zA-3d3"/>
                 <constraint firstItem="pZY-IV-YXr" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="UnB-JI-Cys"/>
+                <constraint firstItem="sRG-eb-kkw" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Wxa-SW-1og"/>
+                <constraint firstAttribute="bottom" secondItem="sRG-eb-kkw" secondAttribute="bottom" id="aLN-fD-vgT"/>
                 <constraint firstItem="ksD-z3-PfK" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="b3h-s0-Wgr"/>
                 <constraint firstItem="pZY-IV-YXr" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="v9Z-Pl-hF7"/>
                 <constraint firstItem="ksD-z3-PfK" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="vrI-hM-SXo"/>

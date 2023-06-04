@@ -39,6 +39,8 @@ class Home: UIViewController {
         
     }
     
+    
+    
 
     private func configureHierarchy() {
         configureBackground()
@@ -60,6 +62,18 @@ class Home: UIViewController {
     
     private func configureSummaryContainerView() {
         summaryContainerView.layer.cornerRadius = 10
+        summaryContainerView.clipsToBounds = true
+        summaryContainerView.layer.masksToBounds = false
+        
+        let shapelayer = CAShapeLayer()
+        shapelayer.path = UIBezierPath(roundedRect: summaryContainerView.bounds, cornerRadius: 10).cgPath
+        shapelayer.shadowPath = UIBezierPath(roundedRect: summaryContainerView.bounds, cornerRadius: 10).cgPath
+        shapelayer.fillColor = UIColor.white.cgColor
+        shapelayer.shadowColor = UIColor.black.cgColor
+        shapelayer.shadowOffset = CGSize(width: 1.0, height: 1.0)
+        shapelayer.shadowRadius = 2
+        shapelayer.shadowOpacity = 0.7
+        summaryContainerView.layer.insertSublayer(shapelayer, at: 0)
     }
     
     private func configureCollectionView() {
@@ -153,7 +167,7 @@ class Home: UIViewController {
         isCollapsed = !isCollapsed
         UIView.animate(withDuration: 0.3, delay: 0.0) { [weak self] in
             guard let self = self else {return }
-            self.collapseCategoryCollectinViewBtn.setImage(self.isCollapsed ? UIImage(systemName: "arrowtriangle.down.fill") : UIImage(systemName: "arrowtriangle.up.fill"), for: .normal)
+            self.collapseCategoryCollectinViewBtn.setImage(self.isCollapsed ? UIImage(systemName: "arrowtriangle.up.fill") : UIImage(systemName: "arrowtriangle.down.fill"), for: .normal)
             self.categoryCollectionViewHeight.constant = self.isCollapsed ? 160 : 80
             self.view.layoutIfNeeded()
         }
